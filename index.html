@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mairie de Saint Martin D'Oydes</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-green-100 text-gray-900">
+
+    <header class="bg-green-700 text-white py-6 shadow-md rounded-b-3xl">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <img src="logo.png" alt="Logo Mairie de Saint Martin D'Oydes" class="h-16 w-auto">
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil" class="text-center py-16 bg-white rounded-lg shadow-lg mx-6 mt-6">
+        <h2 class="text-4xl font-semibold text-green-800">Bienvenue à Saint-Martin-D'Oydes</h2>
+        <p class="mt-4 text-lg text-gray-700">Découvrez notre village, nos services et notre mairie.</p>
+    </section>
+
+    <section id="services" class="py-16 bg-green-200 rounded-lg shadow-lg mx-6 mt-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-green-800">Nos Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 p-4">
+                <div class="p-6 bg-white shadow-md rounded-3xl">
+                    <h3 class="text-xl font-bold">État civil</h3>
+                    <p class="mt-2 text-gray-600">Demandes d'actes de naissance, mariage et décès.</p>
+                </div>
+                <div class="p-6 bg-white shadow-md rounded-3xl">
+                    <h3 class="text-xl font-bold">Urbanisme</h3>
+                    <p class="mt-2 text-gray-600">Permis de construire, déclarations de travaux.</p>
+                </div>
+                <div class="p-6 bg-white shadow-md rounded-3xl">
+                    <h3 class="text-xl font-bold">Vie associative</h3>
+                    <p class="mt-2 text-gray-600">Associations locales et événements.</p>
+                </div>
+            </div>
+            <a href="services.html" class="mt-6 inline-block bg-green-700 text-white py-2 px-4 rounded-3xl">En savoir plus</a>
+        </div>
+    </section>
+
+    <section id="accessibilite" class="py-16 bg-white rounded-lg shadow-lg mx-6 mt-6 text-center">
+        <h2 class="text-3xl font-semibold text-green-800">Accessibilité</h2>
+        <div id="widget-a11y-container" data-pk="48d1106f-1c52-4246-82db-cb4552a5f8ea" data-baseurl="https://acceslibre.beta.gouv.fr"></div>
+        <a href="#" aria-haspopup="dialog" data-erp-pk="48d1106f-1c52-4246-82db-cb4552a5f8ea" aria-controls="dialog" class="mt-6 inline-block bg-green-700 text-white py-2 px-4 rounded-3xl">En savoir plus</a>
+    </section>
+
+    <section id="contact" class="py-16 bg-green-200 rounded-lg shadow-lg mx-6 mt-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-green-800">Contactez-nous</h2>
+            <div class="mt-4 text-gray-700">
+                <p><strong>Adresse :</strong> 16 place de l'Église, 09100 Saint-Martin-D'Oydes</p>
+                <p><strong>Téléphone :</strong> 05 61 67 14 23</p>
+                <p><strong>Email :</strong> <a href="mailto:mairiesaintmartindoydes@wanadoo.fr" class="text-green-600 underline">mairiesaintmartindoydes@wanadoo.fr</a></p>
+            </div>
+            <a href="contact.html" class="mt-6 inline-block bg-green-700 text-white py-2 px-4 rounded-3xl">En savoir plus</a>
+        </div>
+    </section>
+
+    <footer class="bg-green-700 text-white py-4 text-center rounded-t-3xl mt-6">
+        <p>&copy; 2025 Mairie de Saint-Martin-D'Oydes - Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://acceslibre.beta.gouv.fr/static/js/widget.js" type="text/javascript" async="true"></script>
+    <script src="script.js"></script>
+</body>
+</html>
