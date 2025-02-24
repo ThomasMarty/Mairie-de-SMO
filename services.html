@@ -14,19 +14,30 @@
             <a href="index.html">
                 <img src="logo.png" alt="Logo Mairie de Saint-Martin-D'Oydes" class="h-16 w-auto">
             </a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="#services" class="nav-link active">Services</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="#services" class="nav-link active">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
+            <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
         </div>
     </header>
 
-    <section class="py-16 bg-white rounded-lg shadow-lg mx-6 mt-6 text-center" id="services">
+    <div id="mobile-menu" class="md:hidden bg-green-700 text-white py-4 shadow-md rounded-b-3xl fixed top-0 left-0 w-full transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <nav class="flex flex-col space-y-4 px-6">
+            <a href="index.html" class="nav-link w-full py-2 text-center">Accueil</a>
+            <a href="#services" class="nav-link active w-full py-2 text-center">Services</a>
+            <a href="contact.html" class="nav-link w-full py-2 text-center">Contact</a>
+        </nav>
+    </div>
+
+    <section class="py-16 bg-white rounded-lg shadow-lg mx-6 mt-6 text-center p-4" id="services">
         <h2 class="text-3xl font-semibold text-green-800">Nos Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 p-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
             <div class="p-6 bg-white shadow-md rounded-3xl">
                 <h3 class="text-xl font-bold">État civil</h3>
                 <p class="mt-2 text-gray-600">Demandes d'actes de naissance, mariage et décès.</p>
@@ -57,5 +68,21 @@
     <footer class="bg-green-700 text-white py-4 text-center rounded-t-3xl mt-6">
         <p>&copy; 2025 Mairie de Saint-Martin-D'Oydes - Tous droits réservés.</p>
     </footer>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+        });
+
+        // Close the mobile menu when navigating to a new page
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full');
+            });
+        });
+    </script>
 </body>
 </html>
